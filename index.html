@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="./src/style.css" defer></script>
+    <title>Reto Ipsum Desarrollo</title>
+</head>
+<body>
+    <main>
+        <section class="one"></section>
+        <section class="two">
+            <div class="title">
+                <div class="circle"></div>
+                <h1>Regístrate a
+                    <span>WePlot</span>
+                </h1>
+            </div>
+            <form action="" method="get">
+                <div class="form">
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" name="nombre" id="nombre" required />
+                </div>
+                <div class="form">
+                    <label for="apellido">Apellido</label><br>
+                    <input type="text" name="apellido" id="apellido" required />
+                </div>
+                <div class="form">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" required />
+                </div>
+                <div class="form">
+                    <label for="telefono">Teléfono</label><br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+00" required>
+                </div>
+                <div class="form complete">
+                    <label for="pais">País</label><br>
+                    <input type="text" name="pais" id="pais" required />
+                </div>
+                <div class="form">
+                    <label for="comida">Comida favorita</label><br>
+                    <input type="text" name="comida" id="comida" required />
+                </div>
+                <div class="form">
+                    <label for="artista">Artista favorito</label><br>
+                    <input type="text" name="artista" id="artista" required />
+                </div>
+                <div class="form">
+                    <label for="lugar">Lugar favorito</label><br>
+                    <input type="text" name="lugar" id="lugar" required />
+                </div>
+                <div class="form">
+                    <label for="color">Color favorito</label><br>
+                    <input type="text" name="color" id="color" required />
+                </div>
+                <div class="form">
+                    <label for="contraseña">Contraseña</label><br>
+                    <input type="password" name="contraseña" id="contraseña" required />
+                </div>
+                <div class="form">
+                    <label for="contraseña-confirm">Confirmar contraseña</label><br>
+                    <input type="password" name="contraseña-confirm" id="contraseña-confirm" required />
+                </div>
+                <div class="form">
+                    <label for="foto">Foto de perfil</label><br>
+                    <input class="file" type="file" name="foto" id="foto" accept="image/png, image/jpeg, image/jpg" required />
+                    <small>Jpg o Png de máximo 10 MB</small>
+                </div>
+                <div class="form">
+                    <button id="button" type="submit">
+                        Unirme a WePlot
+                    </button>
+                </div>
+            </form>
+            <small class="cuenta">¿Ya tienes cuenta?
+                <a href="#">Inicia sesión aquí</a>
+            </small>
+            <!--
+                <form action="http://httpbin.org/post" method="post"></form>
+            -->
+        </section>
+    </main>
+</body>
+</html>
