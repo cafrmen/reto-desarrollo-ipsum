@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'pridi';
+    src: url('../fonts/Pridi/Pridi-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'title';
+    src: url('../fonts/Pridi/Pridi-SemiBold.ttf') format('truetype');
+}
+
+:root {
+    --font: 'pridi', sans-serif;
+    --title: 'title', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: var(--font);
+    color: gray;
+}
+
+main {
+    display: flex;
+}
+
+.one {
+    width: 45vw;
+    min-height: 100vh;
+    background-image: url('../media/imagen.png');
+    filter: invert(1);
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    align-items: center;
+}
+
+.two {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 0 7%;
+    padding: 0;
+}
+
+.circle {
+    width: 7em;
+    height: 7em;
+    margin-left: 0%;
+    margin-top: 18%;
+    top: 12px;
+    border: 5px solid purple;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    animation: rotate 3s infinite ease-in-out alternate;
+}
+
+@keyframes rotate {
+    from {
+        scale: 100%;
+        border-color: purple;
+    }
+    to {
+        scale: 200%;
+        border-color: orange;
+    }
+}
+
+h1 {
+    margin-top: 60px;
+    margin-left: 55px;
+    font-size: 2.5em;
+    font-family: 'title', sans-serif;
+    background-color: white;
+    color: rgb(34, 34, 34);
+}
+
+span, a {
+    color: orange;
+    text-decoration: none;
+}
+
+form {
+    padding: 0 12%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form {
+    padding: 7px 34px;
+}
+
+input {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 2em;
+    width: 15vw;
+}
+
+.complete {
+    width: 83%;
+}
+
+.file {
+    border: none;
+}
+
+button {
+    display: block;
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-family: var(--font);
+    transition: 0.7s ease-in-out;
+}
+
+button:hover {
+    color: orange;
+    background-color: white;
+    border: 1px solid purple;
+}
+
+.cuenta {
+    margin-left: calc(12% + 34px);
+}
+
+@media only screen and (max-width: 1050px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .circle {
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    @keyframes rotate {
+        from {
+            scale: 100%;
+            border-color: purple;
+            translate: 50vw;
+        }
+        to {
+            scale: 200%;
+            border-color: orange;
+            translate: 0vw;
+        }
+    }
+    .form {
+        width: 90%;
+    }
+    input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .circle {
+        width: 6em;
+        height: 6em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .form {
+        width: 100%;
+        padding: 7px;
+    }
+    input {
+        width: 100%;
+    }
+    .cuenta {
+        margin: 0;
+        padding: 12px;
+    }
+}
+
