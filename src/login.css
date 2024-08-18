@@ -144,11 +144,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 1050px) {
-    body {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
     .circle {
         margin-left: 10px;
         margin-top: 50px;
@@ -157,7 +152,7 @@ button:hover {
         from {
             scale: 100%;
             border-color: purple;
-            translate: 50vw;
+            translate: 20vw;
         }
         to {
             scale: 200%;
