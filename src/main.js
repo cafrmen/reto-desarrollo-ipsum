@@ -36,7 +36,7 @@ button.addEventListener('click', (event) => {
     }
     if (phone.value.length < 6) {
         event.preventDefault();
-        alert('No existe ningún número de teléfono inferior a 6 dígitos...');
+        alert('El formato para el teléfono es de 2 dígitos por código de país + "-" + 10 dígitos sin espacios por favor :)');
         phone.value = '';
     }
     if (country.value.length < 4) {
