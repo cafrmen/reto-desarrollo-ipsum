@@ -33,7 +33,7 @@ main {
     width: 45vw;
     min-height: 100vh;
     background-image: url('../media/imagen.png');
-    filter: invert(1);
+    filter: invert(0.89);
     background-size: cover;
     background-position: center;
 }
@@ -94,6 +94,11 @@ h1 {
 span, a {
     color: orange;
     text-decoration: none;
+    transition: 0.7s ease-in-out;
+}
+
+a:hover {
+    color: purple;
 }
 
 form {
