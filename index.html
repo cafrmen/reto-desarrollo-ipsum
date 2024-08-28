@@ -20,55 +20,55 @@
             <form action="" method="get">
                 <div class="form">
                     <label for="nombre">Nombre</label><br>
-                    <input type="text" name="nombre" id="nombre" required />
+                    <input type="text" name="nombre" id="nombre" onblur="validateName()" required />
                 </div>
                 <div class="form">
                     <label for="apellido">Apellido</label><br>
-                    <input type="text" name="apellido" id="apellido" required />
+                    <input type="text" name="apellido" id="apellido" onblur="validateLastName()" required />
                 </div>
                 <div class="form">
                     <label for="email">Email</label><br>
-                    <input type="email" name="email" id="email" required />
+                    <input type="email" name="email" id="email" onblur="validateEmail()" required />
                 </div>
                 <div class="form">
-                    <label for="telefono">Teléfono <small>* ver formato</small></label><br>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{2}-[0-9]{10}" placeholder="00-0000000000" required>
+                    <label for="telefono">Teléfono</label><br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="00" onblur="validatePhone()" required>
                 </div>
                 <div class="form complete">
                     <label for="pais">País</label><br>
-                    <input type="text" name="pais" id="pais" required />
+                    <input type="text" name="pais" id="pais" onblur="validateCountry()" required />
                 </div>
                 <div class="form">
                     <label for="comida">Comida favorita</label><br>
-                    <input type="text" name="comida" id="comida" required />
+                    <input type="text" name="comida" id="comida" onblur="validateFood()" required />
                 </div>
                 <div class="form">
                     <label for="artista">Artista favorito</label><br>
-                    <input type="text" name="artista" id="artista" required />
+                    <input type="text" name="artista" id="artista" onblur="validateArtist()" required />
                 </div>
                 <div class="form">
                     <label for="lugar">Lugar favorito</label><br>
-                    <input type="text" name="lugar" id="lugar" required />
+                    <input type="text" name="lugar" id="lugar" onblur="validatePlace()" required />
                 </div>
                 <div class="form">
                     <label for="color">Color favorito</label><br>
-                    <input type="text" name="color" id="color" required />
+                    <input type="text" name="color" id="color" onblur="validateColor()" required />
                 </div>
                 <div class="form">
                     <label for="contrasena">Contraseña</label><br>
-                    <input type="password" name="contrasena" id="contrasena" required />
+                    <input type="password" name="contrasena" id="contrasena" onblur="validatePassword()" required />
                 </div>
                 <div class="form">
                     <label for="contrasena-confirm">Confirmar contraseña</label><br>
-                    <input type="password" name="contrasena-confirm" id="contrasena-confirm" required />
+                    <input type="password" name="contrasena-confirm" id="contrasena-confirm" onblur="validateConfirmationPassword()" required />
                 </div>
                 <div class="form">
                     <label for="foto">Foto de perfil</label><br>
-                    <input class="file" type="file" name="foto" id="foto" accept="image/png, image/jpeg, image/jpg" required />
+                    <input class="file" type="file" name="foto" id="foto" accept="image/png, image/jpeg, image/jpg" />
                     <small>Jpg o Png de máximo 10 MB</small>
                 </div>
                 <div class="form">
-                    <button id="button" type="submit">
+                    <button id="button" type="submit" disabled>
                         Unirme a WePlot
                     </button>
                 </div>

@@ -110,6 +110,14 @@ input {
     border: none;
 }
 
+.invalid {
+    border-color: crimson;
+}
+
+.valid {
+    border-color: #59B689;;
+}
+
 button {
     display: block;
     background-color: purple;
