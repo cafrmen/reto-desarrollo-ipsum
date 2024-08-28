@@ -144,6 +144,10 @@ button:hover {
     border: 1px solid purple;
 }
 
+button > a {
+    color: white;
+}
+
 .cuenta {
     margin-left: calc(12% + 34px);
 }

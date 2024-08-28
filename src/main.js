@@ -11,17 +11,35 @@ const password = document.getElementById('contrasena');
 const confirmPassword = document.getElementById('contrasena-confirm');
 const button = document.getElementById('button');
 
-// Local Storage variables
-let localName = names.value;
-let localLastName = lastName.value;
-let localEmail = email.value;
-let localPhone = phone.value;
-let localCountry = country.value;
-let localFood = food.value;
-let localArtist = artist.value;
-let localPlace = place.value;
-let localColor = color.value;
+// Local Storage data
 let localStorageArray = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayLocalStorageData();
+});
+
+const displayLocalStorageData = () => {
+    localStorageArray = JSON.parse(localStorage.getItem('user'));
+}
+
+const localStorageUserData = () => {
+    localStorage.setItem('user', JSON.stringify(localStorageArray));
+}
+
+// constructor nuevo usuario
+function User(names, lastName, email, phone, country, food, artist, place, color, password) {
+    this.names = names;
+    this.lastName = lastName;
+    this.email = email;
+    this.phone = phone;
+    this.country = country;
+    this.food = food;
+    this.artist = artist;
+    this.place = place;
+    this.color = color;
+    this.password = password;
+    this.id = email+password;
+}
 
 const validateName = () => {
     const regex = /[A-z]{2,}/g;
@@ -238,5 +256,12 @@ const theButton = () => {
 }
 
 button.addEventListener('click', () => {
-    alert('Genial, finalmente lograste responder las preguntas :)')
+    let newUser = new User(names.value, lastName.value, email.value, phone.value, country.value, food.value, artist.value, place.value, color.value, password.value);
+    localStorageArray.push(newUser);
+    localStorageUserData();
+
+    console.log(localStorageArray);
+    alert('Genial, finalmente lograste responder las preguntas :)');
 });
+
+// localStorage.clear();
